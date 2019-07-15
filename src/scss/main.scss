@@ -1,16 +1,72 @@
 @import "_normalize";
 @import "_variables";
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=latin-ext");
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+    color: $yellow;
+    background: $mercury;
+    font-family: "Roboto", sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 812px;
+    width: 100%;
+    flex-direction: column;
+    background: #3767ad;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.add {
+    width: 216px;
+    height: 47px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin-top: 48px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.subtract {
+    margin-top: 38px;
+    background: none;
+    color: #f5e5e7;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.glass {
+    position: relative;
+    &__number {
+        position: absolute;
+        margin: -180px -38px 0px 110px;
+        font-weight: 500;
+        font-size: 112px;
+        line-height: 131px;
+        color: #000000;
+    }
 }
