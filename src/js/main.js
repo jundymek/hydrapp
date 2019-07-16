@@ -21,14 +21,23 @@ const subtract = document.querySelector('.subtract--js')
 const number = document.querySelector('.glass__number--js')
 const key = new Date().toISOString().slice(0, 10)
 
+if (!localStorage.getItem(key)) {
+  localStorage.setItem(key, 0)
+  number.innerHTML = 0
+} else {
+  number.innerHTML = localStorage.getItem(key)
+}
+
 add.addEventListener('click', (e) => {
   if (parseInt(number.innerHTML) < 9) {
     number.innerHTML = parseInt(number.innerHTML) + 1
+    localStorage.setItem(key, number.innerHTML)
   }
 })
 
 subtract.addEventListener('click', (e) => {
   if (parseInt(number.innerHTML) > 0) {
     number.innerHTML = parseInt(number.innerHTML) - 1
+    localStorage.setItem(key, number.innerHTML)
   }
 })
