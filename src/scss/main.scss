@@ -69,4 +69,44 @@ body {
         line-height: 131px;
         color: #000000;
     }
+    &__path--0 {
+        fill: #eceff1;
+        clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+        transition: fill 1s ease-in, clip-path 1s ease-in;
+        &:hover {
+            fill: blue;
+        }
+    }
+    &__path--1 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-out;
+    }
+    &__path--2 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-in fill 1s ease-in;
+    }
+    &__path--3 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-in;
+    }
+    &__path--4 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-in;
+    }
+    &__path--5 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-in;
+    }
+    &__path--6 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-in;
+    }
+    &__path--7 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-in;
+    }
+    &__path--8 {
+        clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+        transition: clip-path 1s ease-in;
+    }
 }
