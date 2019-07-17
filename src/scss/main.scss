@@ -18,21 +18,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 812px;
-    width: 100%;
-    flex-direction: column;
-    background: #3767ad;
-}
-
-.button-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
 .add {
     width: 216px;
     height: 47px;
@@ -45,18 +30,9 @@ body {
     line-height: 21px;
 }
 
-.subtract {
-    margin-top: 38px;
-    background: none;
-    color: #f5e5e7;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .glass {
@@ -110,7 +86,40 @@ body {
         transition: fill 1s ease-in, clip-path 1s ease-in;
     }
     &__path--9 {
-      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-      transition: fill 1s ease-in, clip-path 1s ease-in;
-  }
+        clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+        transition: fill 1s ease-in, clip-path 1s ease-in;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 812px;
+    width: 100%;
+    flex-direction: column;
+    background: #3767ad;
+}
+
+.subtract {
+    margin-top: 38px;
+    background: none;
+    color: #f5e5e7;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.link {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 30px;
 }
