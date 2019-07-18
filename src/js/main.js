@@ -28,6 +28,14 @@ const number = document.querySelector(".glass__number--js");
 const key = new Date().toISOString().slice(0, 10);
 const glass = document.querySelector(".glass__path--js");
 
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+console.log(today)
+
 if (number) {
   if (!localStorage.getItem(key)) {
     localStorage.setItem(key, 0);
@@ -35,6 +43,7 @@ if (number) {
     glass.classList.add("glass__path--0");
   } else {
     number.innerHTML = localStorage.getItem(key);
+    glass.classList.add(`glass__path--${parseInt(number.innerHTML)}`);
   }
 }
 

@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    color: $yellow;
+    color: $black;
     background: $mercury;
     font-family: "Roboto", sans-serif;
 }
@@ -91,6 +91,29 @@ body {
     }
 }
 
+.header {
+    margin-top: 100px;
+    &__h1 {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: #F5E5E7;
+    }
+}
+
+.link {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 30px;
+    color: $pourri;
+      &:visited {
+        color: $pourri;
+      }
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -98,13 +121,16 @@ body {
     height: 812px;
     width: 100%;
     flex-direction: column;
-    background: #3767ad;
+    background: $azure;
+    &--history {
+        justify-content: flex-start;
+    }
 }
 
 .subtract {
     margin-top: 38px;
     background: none;
-    color: #f5e5e7;
+    color: $pourri;
     border: none;
     padding: 0;
     font: inherit;
@@ -115,11 +141,35 @@ body {
     line-height: 16px;
 }
 
-.link {
-    text-align: center;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    margin-top: 30px;
+.table {
+    display: block;
+    border-spacing: 0;
+    max-height: 500px;
+    overflow: auto;
+    &__head {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #f5e5e7;
+    }
+    &__th {
+        min-width: 166px;
+        height: 56px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        &--head {
+            background:#000000;
+            color: $pourri;
+            position: sticky;
+            top: 0;
+        }
+    }
+    &__tr {
+      background: #A9AEB6;
+      &:nth-child(odd) {
+        background: #C4CAD3;
+      }
+    }
 }
