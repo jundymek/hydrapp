@@ -25,16 +25,18 @@ if ("serviceWorker" in navigator) {
 const add = document.querySelector(".add--js");
 const subtract = document.querySelector(".subtract--js");
 const number = document.querySelector(".glass__number--js");
-const key = new Date().toISOString().slice(0, 10);
 const glass = document.querySelector(".glass__path--js");
+const key = currentDate();
+const mySound = new Audio('assets/sounds/water.wav')
 
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
-
-today = mm + '/' + dd + '/' + yyyy;
-console.log(today)
+function currentDate() {
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const yyyy = today.getFullYear();
+  const current = `${dd}/${mm}/${yyyy}`;
+  return current;
+}
 
 if (number) {
   if (!localStorage.getItem(key)) {
@@ -50,6 +52,7 @@ if (number) {
 if (add) {
   add.addEventListener("click", e => {
     if (parseInt(number.innerHTML) < 9) {
+      mySound.play()
       number.innerHTML = parseInt(number.innerHTML) + 1;
       localStorage.setItem(key, number.innerHTML);
       glass.classList.remove(
@@ -63,6 +66,7 @@ if (add) {
 if (subtract) {
   subtract.addEventListener("click", e => {
     if (parseInt(number.innerHTML) > 0) {
+      mySound.play()
       number.innerHTML = parseInt(number.innerHTML) - 1;
       localStorage.setItem(key, number.innerHTML);
       glass.classList.remove(
