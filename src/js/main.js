@@ -39,6 +39,8 @@ function currentDate() {
   return current;
 }
 
+const audio = document.querySelector(".onoffswitch-checkbox--js")
+
 if (number) {
   if (!localStorage.getItem(key)) {
     localStorage.setItem(key, 0);
@@ -53,7 +55,10 @@ if (number) {
 if (add) {
   add.addEventListener("click", e => {
     if (parseInt(number.innerHTML) < 9) {
-      waterSound.play();
+      console.log(audio.checked)
+      if (audio.checked) {
+        waterSound.play();
+      }
       number.innerHTML = parseInt(number.innerHTML) + 1;
       localStorage.setItem(key, number.innerHTML);
       glass.classList.remove(
@@ -66,8 +71,12 @@ if (add) {
 
 if (subtract) {
   subtract.addEventListener("click", e => {
+    e.preventDefault();
+    console.log(audio.value)
     if (parseInt(number.innerHTML) > 0) {
-      drainSound.play();
+      if (audio.checked) {
+        drainSound.play();
+      }
       number.innerHTML = parseInt(number.innerHTML) - 1;
       localStorage.setItem(key, number.innerHTML);
       glass.classList.remove(
@@ -91,3 +100,4 @@ if (table) {
                             </tr>`;
   }
 }
+
