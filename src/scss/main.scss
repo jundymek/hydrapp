@@ -36,7 +36,6 @@ body {
 }
 
 .glass {
-    position: relative;
     &__number {
         position: absolute;
         margin: -180px -38px 0px 110px;
@@ -119,6 +118,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 812px;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     background: $azure;
