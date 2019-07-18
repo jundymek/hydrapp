@@ -27,7 +27,8 @@ const subtract = document.querySelector(".subtract--js");
 const number = document.querySelector(".glass__number--js");
 const glass = document.querySelector(".glass__path--js");
 const key = currentDate();
-const mySound = new Audio('assets/sounds/water.wav')
+const waterSound = new Audio('assets/sounds/water.wav');
+const drainSound = new Audio('assets/sounds/drain.wav');
 
 function currentDate() {
   const today = new Date();
@@ -52,7 +53,7 @@ if (number) {
 if (add) {
   add.addEventListener("click", e => {
     if (parseInt(number.innerHTML) < 9) {
-      mySound.play()
+      waterSound.play();
       number.innerHTML = parseInt(number.innerHTML) + 1;
       localStorage.setItem(key, number.innerHTML);
       glass.classList.remove(
@@ -66,7 +67,7 @@ if (add) {
 if (subtract) {
   subtract.addEventListener("click", e => {
     if (parseInt(number.innerHTML) > 0) {
-      mySound.play()
+      drainSound.play();
       number.innerHTML = parseInt(number.innerHTML) - 1;
       localStorage.setItem(key, number.innerHTML);
       glass.classList.remove(
