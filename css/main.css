@@ -323,19 +323,7 @@ body {
   background: #E5E5E5;
   font-family: "Roboto", sans-serif; }
 
-.add {
-  width: 216px;
-  height: 47px;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  margin-top: 48px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px; }
-
-.button-wrapper {
+.buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,113 +331,125 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .buttons__add {
+    width: 216px;
+    height: 47px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin-top: 48px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px; }
+  .buttons__subtract {
+    margin-top: 38px;
+    background: none;
+    color: #F5E5E7;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px; }
 
-.glass-wrapper {
+.glass {
   position: relative; }
-
-.glass__number {
-  position: absolute;
-  margin: -44% 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-weight: 500;
-  font-size: 112px;
-  line-height: 131px;
-  color: #000000; }
-
-.glass__path--0 {
-  fill: #eceff1;
-  -webkit-clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
-          clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-  .glass__path--0:hover {
-    fill: blue; }
-
-.glass__path--1 {
-  -webkit-clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
-          clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--2 {
-  -webkit-clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
-          clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--3 {
-  -webkit-clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
-          clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--4 {
-  -webkit-clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
-          clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--5 {
-  -webkit-clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
-          clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--6 {
-  -webkit-clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
-          clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--7 {
-  -webkit-clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
-          clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--8 {
-  -webkit-clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
-          clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
-
-.glass__path--9 {
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-  -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
-  -o-transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in;
-  transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__counter {
+    position: absolute;
+    margin: -44% 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 112px;
+    line-height: 131px;
+    color: #000000; }
+  .glass__path--0 {
+    fill: #eceff1;
+    -webkit-clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+            clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .glass__path--0:hover {
+      fill: blue; }
+  .glass__path--1 {
+    -webkit-clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--2 {
+    -webkit-clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--3 {
+    -webkit-clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--4 {
+    -webkit-clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--5 {
+    -webkit-clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--6 {
+    -webkit-clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+            clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--7 {
+    -webkit-clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+            clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--8 {
+    -webkit-clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+            clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__path--9 {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
 
 .header {
   margin-top: 5vw; }
@@ -495,19 +495,6 @@ body {
         -ms-flex-pack: start;
             justify-content: flex-start; }
 
-.subtract {
-  margin-top: 38px;
-  background: none;
-  color: #F5E5E7;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px; }
-
 .table {
   display: block;
   border-spacing: 0;
@@ -533,6 +520,14 @@ body {
       position: -webkit-sticky;
       position: sticky;
       top: 0; }
+  .table__td {
+    min-width: 158px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    text-align: center; }
   .table__tr {
     background: #a9aeb6; }
     .table__tr:nth-child(odd) {
@@ -569,7 +564,8 @@ body {
   -o-transition: margin 0.3s ease-in 0s;
   transition: margin 0.3s ease-in 0s; }
 
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
   display: block;
   float: left;
   width: 50%;
@@ -586,13 +582,13 @@ body {
 .onoffswitch-inner:before {
   content: "ON";
   padding-left: 12px;
-  background-color: #3767AD;
-  color: #FFFFFF; }
+  background-color: #3767ad;
+  color: #ffffff; }
 
 .onoffswitch-inner:after {
   content: "OFF";
   padding-right: 12px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   color: #999999;
   text-align: right; }
 
@@ -600,7 +596,7 @@ body {
   display: block;
   width: 27px;
   margin: -2.5px;
-  background: #FFFFFF;
+  background: #ffffff;
   position: absolute;
   top: 0;
   bottom: 0;
