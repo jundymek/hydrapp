@@ -35,10 +35,15 @@ body {
     flex-direction: column;
 }
 
+.glass-wrapper {
+  position: relative;
+}
+
 .glass {
     &__number {
         position: absolute;
-        margin: -180px -38px 0px 110px;
+        margin: -44% 50%;
+        transform: translate(-50%, -50%);
         font-weight: 500;
         font-size: 112px;
         line-height: 131px;
