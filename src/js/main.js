@@ -22,9 +22,9 @@ if ("serviceWorker" in navigator) {
 
 // place your code below
 
-const add = document.querySelector(".add--js");
-const subtract = document.querySelector(".subtract--js");
-const number = document.querySelector(".glass__number--js");
+const add = document.querySelector(".buttons__add--js");
+const subtract = document.querySelector(".buttons__subtract--js");
+const number = document.querySelector(".glass__counter--js");
 const glass = document.querySelector(".glass__path--js");
 const key = currentDate();
 const waterSound = new Audio('assets/sounds/water.wav');
@@ -95,8 +95,8 @@ if (table) {
     console.log(localStorage.key(i));
     console.log(localStorage.getItem(localStorage.key(i)));
     table.innerHTML += `<tr class="table__tr">
-                              <th class="table__th">${key}</th>
-                              <th class="table__th">${value}</th>
+                              <td class="table__td">${key}</td>
+                              <td class="table__td">${value}</td>
                             </tr>`;
   }
 }

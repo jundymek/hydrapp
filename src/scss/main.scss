@@ -18,29 +18,38 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.add {
-    width: 216px;
-    height: 47px;
-    background: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    margin-top: 48px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-}
-
-.button-wrapper {
+.buttons {
     display: flex;
     flex-direction: column;
-}
-
-.glass-wrapper {
-  position: relative;
+    &__add {
+        width: 216px;
+        height: 47px;
+        background: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        margin-top: 48px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &__subtract {
+        margin-top: 38px;
+        background: none;
+        color: $pourri;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 
 .glass {
-    &__number {
+    position: relative;
+    &__counter {
         position: absolute;
         margin: -44% 50%;
         transform: translate(-50%, -50%);
@@ -134,20 +143,6 @@ body {
     }
 }
 
-.subtract {
-    margin-top: 38px;
-    background: none;
-    color: $pourri;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-}
-
 .table {
     display: block;
     border-spacing: 0;
@@ -176,6 +171,15 @@ body {
             top: 0;
         }
     }
+    &__td {
+        min-width: 158px;
+        height: 56px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        text-align: center;
+    }
     &__tr {
         background: #a9aeb6;
         &:nth-child(odd) {
@@ -187,54 +191,78 @@ body {
 // On/Off switch from https://proto.io/freebies/onoff/ generator
 
 .onoffswitch {
-  justify-self: flex-start;
-  margin: 0 25px 4vw 250px;
-  position: relative; width: 76px;
-  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-  &__label {
-    position: absolute;
-    margin: 6px 240px 0 -50px;
-    color: $pourri;
-  }
+    justify-self: flex-start;
+    margin: 0 25px 4vw 250px;
+    position: relative;
+    width: 76px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    &__label {
+        position: absolute;
+        margin: 6px 240px 0 -50px;
+        color: $pourri;
+    }
 }
 .onoffswitch-checkbox {
-  display: none;
+    display: none;
 }
 .onoffswitch-label {
-  display: block; overflow: hidden; cursor: pointer;
-  border: 2px solid #999999; border-radius: 4px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 4px;
 }
 .onoffswitch-inner {
-  display: block; width: 200%; margin-left: -100%;
-  transition: margin 0.3s ease-in 0s;
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
 }
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-  display: block; float: left; width: 50%; height: 22px; padding: 0; line-height: 22px;
-  font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-  box-sizing: border-box;
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 22px;
+    padding: 0;
+    line-height: 22px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-  content: "ON";
-  padding-left: 12px;
-  background-color: #3767AD; color: #FFFFFF;
+    content: "ON";
+    padding-left: 12px;
+    background-color: #3767ad;
+    color: #ffffff;
 }
 .onoffswitch-inner:after {
-  content: "OFF";
-  padding-right: 12px;
-  background-color: #EEEEEE; color: #999999;
-  text-align: right;
+    content: "OFF";
+    padding-right: 12px;
+    background-color: #eeeeee;
+    color: #999999;
+    text-align: right;
 }
 .onoffswitch-switch {
-  display: block; width: 27px; margin: -2.5px;
-  background: #FFFFFF;
-  position: absolute; top: 0; bottom: 0;
-  right: 51px;
-  border: 2px solid #999999; border-radius: 4px;
-  transition: all 0.3s ease-in 0s; 
+    display: block;
+    width: 27px;
+    margin: -2.5px;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 51px;
+    border: 2px solid #999999;
+    border-radius: 4px;
+    transition: all 0.3s ease-in 0s;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-  margin-left: 0;
+    margin-left: 0;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px; 
+    right: 0px;
 }
