@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import "_animations";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=latin-ext");
 
 html {
@@ -106,11 +107,15 @@ body {
 
 .header {
     margin-top: 5vw;
+    height: 90px;
     &__h1 {
+        position: relative;
         font-weight: 500;
         font-size: 36px;
         line-height: 42px;
         color: #f5e5e7;
+        animation: heading;
+        animation-duration: 2s;
     }
 }
 
@@ -151,6 +156,8 @@ body {
     -webkit-box-shadow: 13px 10px 41px -4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 13px 10px 41px -4px rgba(0, 0, 0, 0.75);
     box-shadow: 13px 10px 41px -4px rgba(0, 0, 0, 0.75);
+    animation: table;
+    animation-duration: 2s;
     &__head {
         font-weight: 500;
         font-size: 18px;

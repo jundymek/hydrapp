@@ -1,0 +1,19 @@
+@keyframes heading {
+    from {
+        margin-top: -4em;
+    }
+
+    to {
+        margin-top: 0.67em;
+    }
+}
+
+@keyframes table {
+    from {
+        margin-left: -100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
