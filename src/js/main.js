@@ -29,6 +29,7 @@ const glass = document.querySelector(".glass__path--js");
 const key = currentDate();
 const waterSound = new Audio('assets/sounds/water.wav');
 const drainSound = new Audio('assets/sounds/drain.wav');
+const audio = document.querySelector(".onoffswitch-checkbox--js")
 
 function currentDate() {
   const today = new Date();
@@ -39,7 +40,14 @@ function currentDate() {
   return current;
 }
 
-const audio = document.querySelector(".onoffswitch-checkbox--js")
+checkTableData('assa')
+
+function checkTableData(data) {
+  const regex = new RegExp('\\d{2}/\\d{2}/\\d{4}')
+  if (data.match(regex)) {
+    return true
+  }
+}
 
 if (number) {
   if (!localStorage.getItem(key)) {
@@ -92,12 +100,12 @@ if (table) {
   for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
     let value = localStorage.getItem(key);
-    console.log(localStorage.key(i));
-    console.log(localStorage.getItem(localStorage.key(i)));
-    table.innerHTML += `<tr class="table__tr">
+    if (checkTableData(key)) {
+      table.innerHTML += `<tr class="table__tr">
                               <td class="table__td">${key}</td>
                               <td class="table__td">${value}</td>
                             </tr>`;
+    }
   }
 }
 
